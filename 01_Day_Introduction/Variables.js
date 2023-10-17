@@ -3,7 +3,7 @@ message = "Hey I'm a variable " //assign a value to the variable
 
 let message2 = 'Hello!'; // define the variable and assign the value
 
-alert(message2); // Hello!
+lert(message2); // Hello!
 
 
 // We can also declare multiple variables in one line:
