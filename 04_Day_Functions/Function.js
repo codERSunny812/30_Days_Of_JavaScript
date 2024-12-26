@@ -4,7 +4,7 @@ function sayMyName(){
     console.log("sunny");
 }
 
-sayMyName// funciton refrence 
+sayMyName // funciton refrence 
 sayMyName() //function call 
 
 function addTwoNumber(num1,num2){ //parameter
@@ -24,6 +24,19 @@ function addThreeNumber (num1,num2,num3){
 const result = addThreeNumber(1,2,3)
 
 console.log(result);
+
+
+// function used a varible value 
+
+function toCelsius(fahrenheit) {
+    return (5 / 9) * (fahrenheit - 32);
+}
+
+
+let x = toCelsius(77);
+let text = "The temperature is " + x + " Celsius";
+
+console.log(text);
 
 
 

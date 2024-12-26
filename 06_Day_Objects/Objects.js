@@ -1,4 +1,6 @@
 // how object is created 
+
+
 let users ={
     name:"sunny",
     age:21,
@@ -8,7 +10,8 @@ let users ={
 
 console.log(users);
 
-// ways to acess the objects
+// ways to acess the objects:
+
 // 1.using dot notation
 console.log(users.name);
 

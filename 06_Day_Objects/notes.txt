@@ -1,0 +1,23 @@
+How to Define a JavaScript Object:
+
+Using an Object Literal
+Using the new Keyword
+Using an Object Constructor
+
+* JavaScript Object Literal:
+
+An object literal is a list of name:value pairs inside curly braces {}.
+
+
+
+* Using the new Keyword:
+
+const person = new Object();
+
+// Add Properties
+person.firstName = "John";
+person.lastName = "Doe";
+person.age = 50;
+person.eyeColor = "blue";
+
+
