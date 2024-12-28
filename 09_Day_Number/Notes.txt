@@ -1,0 +1,14 @@
+javascript number are always 64 bit floating points
+
+all number are stored as 64 bit floating point number.
+
+
+This format stores numbers in 64 bits, where the number (the fraction) is stored in bits 0 to 51, the exponent in bits 52 to 62, and the sign in bit 63:
+
+
+
+the maximun  number of digit stored is 17 in decimal
+
+the javascript interpreter work from left to the right
+
+javascript can also  have numeric strings.

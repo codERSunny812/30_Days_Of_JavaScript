@@ -23,6 +23,15 @@ console.log(users["full name"]);
 console.log("name" in users);
 
 
+// adding new property to the object 
+users.lastname = "pandey"
+
+// delete property 
+
+delete users["full name"];
+
+
+
 // to itrate a object
  for(let key  in users){
     console.log(key);
@@ -43,7 +52,57 @@ for (let code in codes) {
     console.log(code); // 1, 41, 44, 49
 }
 
-// In js the object follow interger property and interger arange in asending order but this is not true in case of non integer 
+// In js the object follow interger property and interger arange in asending order but this is not true in case of non integer
+
+// Displaying the object 
+
+// Create an Object
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+
+// Create an Array
+// it will create an arrry of the property value 
+const myArray = Object.values(person);
+
+console.log(myArray);
+
+
+const fruits = { Bananas: 300, Oranges: 200, Apples: 500 };
+
+let text = "";
+for (let [fruit, value] of Object.entries(fruits)) {
+    text += fruit + ": " + value + "<br>";
+    console.log(text)
+}
+
+
+// creating a object  using contructor function
+
+const myDetail = new PersonValue("sunny","male",23);
+
+function PersonValue(name,male,age){
+    this.name= name;
+    this.gender=this.gender;
+    this.age=age;
+}
+
+
+// adding a property to an  object contructor
+PersonValue.prototype.nationality = "English";
+
+
+// adding a method to an object contructor 
+PersonValue.prototype.changeName = function (name) {
+    this.lastName = name;
+}
+
+myMother.changeName("Doe");
+
+
+
 
 
 // Object references and copying
@@ -59,7 +118,7 @@ phrase="hello world!";
 
 console.log(message + " " + phrase);
 
-// phrase is chnaged but the Message will not
+// phrase is changed but the Message will not
 
 // but in case of object this is not true 
 
@@ -74,18 +133,17 @@ admin.age=23;
 console.log(user + " " + admin);
 
 
-// comparision of object 
+// // comparision of object 
 
 let a = {};
 let b = a; // copy the reference
 
-alert(a == b); // true, both variables reference the same object
-alert(a === b); // true
+console.log(a == b); // true, both variables reference the same object
 
 let a1 = {};
 let b1 = {}; // two independent objects
 
-alert(a1 == b1); // false
+console.log(a1 == b1); // false
 
 // Two objects are equal only if they are the same object.
 
@@ -99,28 +157,28 @@ let user1 = {
 
 let clone = {}; // the new empty object
 
-// let's copy all user properties into it
+// // let's copy all user properties into it
 for (let key in user1) {
     clone[key] = user[key];
 }
 
 
-// we can also use the object.assign function
+// // we can also use the object.assign function
 
-// whose syntax is :
-// Object.assign(dest, ...sources)
-// here dest is the target object 
-// and sources is the source object 
+// // whose syntax is :
+// // Object.assign(dest, ...sources)
+// // here dest is the target object 
+// // and sources is the source object 
 
 let user3 = { name: "John" };
 
 let permissions1 = { canView: true };
 let permissions2 = { canEdit: true };
 
-// copies all properties from permissions1 and permissions2 into user
+// // copies all properties from permissions1 and permissions2 into user
 Object.assign(user3, permissions1, permissions2);
 
-// now user = { name: "John", canView: true, canEdit: true }
+// // now user = { name: "John", canView: true, canEdit: true }
 alert(user3.name); // John
 alert(user3.canView); // true
 alert(user3.canEdit); // true

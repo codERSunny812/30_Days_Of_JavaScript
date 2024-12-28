@@ -21,3 +21,20 @@ person.age = 50;
 person.eyeColor = "blue";
 
 
+
+A function stored as a property value is known as method.
+
+
+Displaying a JavaScript object will output [object Object].
+
+So we can use follwing method to solve this:
+
+Displaying the Object Properties by name
+Displaying the Object Properties in a Loop
+Displaying the Object using Object.values()
+Displaying the Object using JSON.stringify()
+
+
+
+
+
