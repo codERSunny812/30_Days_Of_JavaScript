@@ -1,0 +1,51 @@
+JavaScript Array Const
+
+An array declared with const cannot be reassigned:
+
+const cars = ["Saab", "Volvo", "BMW"];
+cars = ["Toyota", "Volvo", "Audi"];    // ERROR
+
+The keyword const is a little misleading.
+
+It does NOT define a constant array. It defines a constant reference to an array.
+
+Because of this, we can still change the elements of a constant array.
+
+example:
+
+// You can create a constant array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// You can change an element:
+cars[0] = "Toyota";
+
+// You can add an element:
+cars.push("Audi");
+
+
+JavaScript const variables must be assigned a value when they are declared:
+
+Redeclaring or reassigning an array to const, in the same scope, or in the same block, is not allowed:
+
+var cars = ["Volvo", "BMW"];     // Allowed
+const cars = ["Volvo", "BMW"];   // Not allowed
+{
+  var cars = ["Volvo", "BMW"];   // Allowed
+  const cars = ["Volvo", "BMW"]; // Not allowed
+}
+
+
+Redeclaring or reassigning an existing const array, in the same scope, or in the same block, is not allowed:
+
+const cars = ["Volvo", "BMW"];   // Allowed
+const cars = ["Volvo", "BMW"];   // Not allowed
+var cars = ["Volvo", "BMW"];     // Not allowed
+cars = ["Volvo", "BMW"];         // Not allowed
+
+{
+  const cars = ["Volvo", "BMW"]; // Allowed
+  const cars = ["Volvo", "BMW"]; // Not allowed
+  var cars = ["Volvo", "BMW"];   // Not allowed
+  cars = ["Volvo", "BMW"];       // Not allowed
+}
+
